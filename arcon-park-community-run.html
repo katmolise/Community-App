@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Arcon Park Community Run</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..900&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+  :root{
+    --stone:#1C1A17;
+    --sand:#F1EAD9;
+    --malachite:#0E6B4E;
+    --malachite-dk:#0A4E39;
+    --ironstone:#9A4B2C;
+    --kaolin:#C99A2E;
+    --line: rgba(28,26,23,0.14);
+  }
+
+  *{box-sizing:border-box; margin:0; padding:0;}
+
+  body{
+    background: var(--sand);
+    color: var(--stone);
+    font-family: 'Space Grotesk', sans-serif;
+    line-height: 1.5;
+  }
+
+  .sheet{
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 0 60px;
+  }
+
+  header.hero{
+    background: var(--stone);
+    color: var(--sand);
+    padding: 56px 32px 40px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .strata{
+    position:absolute;
+    left:0; right:0; bottom:0;
+    height: 10px;
+    background: repeating-linear-gradient(
+      90deg,
+      var(--malachite) 0 18%,
+      var(--ironstone) 18% 36%,
+      var(--kaolin) 36% 54%,
+      var(--malachite) 54% 72%,
+      var(--ironstone) 72% 90%,
+      var(--kaolin) 90% 100%
+    );
+  }
+
+  .eyebrow-line{
+    font-size: 0.82rem;
+    letter-spacing: 0.02em;
+    color: var(--kaolin);
+    margin-bottom: 18px;
+  }
+
+  h1{
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    font-size: clamp(2.3rem, 7vw, 3.4rem);
+    line-height: 1.02;
+    max-width: 11ch;
+  }
+
+  h1 em{
+    font-style: italic;
+    color: var(--malachite);
+    -webkit-text-fill-color: var(--malachite);
+  }
+
+  .hero-sub{
+    margin-top: 18px;
+    font-size: 1.05rem;
+    max-width: 46ch;
+    color: rgba(241,234,217,0.82);
+  }
+
+  section{
+    padding: 40px 32px 0;
+  }
+
+  .details{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1px;
+    background: var(--line);
+    border: 1px solid var(--line);
+    margin-top: 8px;
+  }
+
+  .detail{
+    background: var(--sand);
+    padding: 20px 18px;
+  }
+
+  .detail .k{
+    font-size: 0.72rem;
+    color: var(--ironstone);
+    margin-bottom: 6px;
+  }
+
+  .detail .v{
+    font-family: 'Fraunces', serif;
+    font-size: 1.3rem;
+    font-weight: 500;
+  }
+
+  h2{
+    font-family: 'Fraunces', serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 14px;
+  }
+
+  .route{
+    margin-top: 8px;
+    border-left: 3px solid var(--malachite);
+    padding-left: 20px;
+  }
+
+  .route p{
+    margin-bottom: 14px;
+    font-size: 0.98rem;
+  }
+
+  .route .note{
+    font-size: 0.85rem;
+    color: rgba(28,26,23,0.6);
+    font-style: italic;
+  }
+
+  .waypoints{
+    margin-top: 22px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .waypoints span{
+    font-size: 0.8rem;
+    padding: 6px 12px;
+    border: 1px solid var(--line);
+    border-radius: 100px;
+    background: #fff;
+  }
+
+  .why{
+    margin-top: 40px;
+    background: var(--malachite);
+    color: var(--sand);
+    padding: 28px 32px;
+  }
+
+  .why h2{ color: var(--sand); }
+
+  .why p{ max-width: 52ch; font-size: 1rem; color: rgba(241,234,217,0.92); }
+
+  footer{
+    padding: 36px 32px 0;
+    font-size: 0.85rem;
+    color: rgba(28,26,23,0.6);
+  }
+
+  .divider{
+    height: 1px;
+    background: var(--line);
+    margin: 40px 32px 0;
+  }
+
+  @media (max-width: 480px){
+    .details{ grid-template-columns: 1fr 1fr; }
+    header.hero{ padding: 44px 22px 32px; }
+    section{ padding: 32px 22px 0; }
+    footer{ padding: 32px 22px 0; }
+    .divider{ margin: 32px 22px 0; }
+  }
+</style>
+</head>
+<body>
+<div class="sheet">
+
+  <header class="hero">
+    <div class="eyebrow-line">Waldrift · Arcon Park</div>
+    <h1>The Arcon Park <em>Community Run</em></h1>
+    <p class="hero-sub">A loop through our own streets — Gabro, Zircon, Ironstone, Malachite — ending back at the gym. Every neighbour, every pace, welcome.</p>
+    <div class="strata"></div>
+  </header>
+
+  <section>
+    <div class="details">
+      <div class="detail">
+        <div class="k">Distance</div>
+        <div class="v">≈ 4.2 km loop</div>
+      </div>
+      <div class="detail">
+        <div class="k">Start / Finish</div>
+        <div class="v">Arcon Park Gym</div>
+      </div>
+      <div class="detail">
+        <div class="k">When</div>
+        <div class="v">1st Saturday, 7:00 AM</div>
+      </div>
+      <div class="detail">
+        <div class="k">Who</div>
+        <div class="v">All ages, run or walk</div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>The route</h2>
+    <div class="route">
+      <p>Start at Arcon Park Gym on Andesite Ave. Head up Gabro Ave to Beril Rd, then follow Beril Rd as it curves along Zircon Ave and down past Sandstone Ave. Loop back down through Tilliet Ave and Malachite Ave, cutting across on Asur Ave and back down Gabro Ave to Andesite Ave and the finish.</p>
+      <p class="note">Distance is an estimate from the mapped route — worth confirming with a GPS watch or app on the first walk-through before it's printed anywhere official.</p>
+    </div>
+    <div class="waypoints">
+      <span>Arcon Park Gym</span>
+      <span>Gabro Ave</span>
+      <span>Beril Rd</span>
+      <span>Zircon Ave</span>
+      <span>Malachite Ave</span>
+      <span>Andesite Ave</span>
+    </div>
+  </section>
+
+  <div class="why">
+    <h2>Why we're running</h2>
+    <p>This isn't just exercise — it's the first regular reason for the whole street to show up in one place. Every run is a chance to talk about what we're building: local jobs, community-owned businesses, and a media centre we can be proud of.</p>
+  </div>
+
+  <div class="divider"></div>
+
+  <footer>
+    Organised by the Waldrift Arcon Park community movement. Bring water, wear something reflective if it's still dark, and bring a neighbour who hasn't come before.
+  </footer>
+
+</div>
+</body>
+</html>
